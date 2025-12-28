@@ -38,6 +38,12 @@ CREATE TABLE Notes (
     FOREIGN KEY (created_by) REFERENCES Users(id)
 );
 
--- Insert admin user (password: password123)
-INSERT INTO Users (firstname, lastname, password, email, role) 
-VALUES ('Admin', 'User', '$2y$10$YourHashedPasswordHere', 'admin@project2.com', 'Admin');
+-- Admin user (email: admin@project2.com, password: password123)
+INSERT INTO Users (firstname, lastname, password, email, role)
+VALUES (
+  'Admin',
+  'User',
+  '$2y$10$PUo3DuUTUpaxSZY3PxbEuuAGqazIHY3y2PAQ1uaYXc8KhsXKvYFvy',
+  'admin@project2.com',
+  'Admin'
+);
